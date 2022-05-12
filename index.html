@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Cabin+Sketch"
+    />
+    <script type="javascript" src="script.js"></script>
+  </head>
+  <body>
+    <header id="etch-a-sketch">Etch-A-Sketch</header>
+    <section>
+      <div id="toolbar-wrapper">
+        <fieldset id="toolbar">
+          <legend>Toolbar</legend>
+          <label for="paint-color" title="Select Color"
+            >Select Color
+            <input type="color" id="paint-color" value="#000000" />
+          </label>
+          <label for="random-color" title="Random Color"
+            >Random Color
+            <input type="radio" id="random" name="random" />
+          </label>
+          <label for="greyscale" title="Greyscale"
+            >Greyscale
+            <input type="radio" id="greyscale" name="greyscale" />
+          </label>
+          <label for="eraser" title="Eraser"
+            >Eraser
+            <input type="radio" id="eraser" name="eraser" />
+          </label>
+          <label for="grid-size" title="Grid Size"
+            >Grid Size
+            <input
+              type="range"
+              id="grid-size"
+              name="grid-size"
+              min="2"
+              max="100"
+            />
+          </label>
+        </fieldset>
+      </div>
+      <div id="grid-wrapper">
+        <div id="grid-box"></div>
+      </div>
+    </section>
+    <footer id="footer">
+      <p>
+        Built by
+        <a href="https://github.com/JoshBennett793">JoshBennett793</a> |
+        <a href="https://github.com/JoshBennett793/Etch-A-Sketch">Source</a>
+      </p>
+    </footer>
+  </body>
+</html>
