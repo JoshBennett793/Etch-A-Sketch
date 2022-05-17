@@ -11,7 +11,7 @@
       type="text/css"
       href="//fonts.googleapis.com/css?family=Cabin+Sketch"
     />
-    <script type="javascript" src="script.js"></script>
+    <script src="/script.js" defer></script>
   </head>
   <body>
     <header id="etch-a-sketch">Etch-A-Sketch</header>
@@ -42,7 +42,7 @@
               id="grid-size"
               name="grid-size"
               min="2"
-              max="100"
+              max="25"
             />
           </label>
         </fieldset>
@@ -51,12 +51,14 @@
         <div id="grid-box"></div>
       </div>
     </section>
-    <footer id="footer">
-      <p>
-        Built by
-        <a href="https://github.com/JoshBennett793">JoshBennett793</a> |
-        <a href="https://github.com/JoshBennett793/Etch-A-Sketch">Source</a>
-      </p>
-    </footer>
+    <div id="footer-wrapper">
+      <footer id="footer">
+        <p>
+          Built by
+          <a href="https://github.com/JoshBennett793">JoshBennett793</a> |
+          <a href="https://github.com/JoshBennett793/Etch-A-Sketch">Source</a>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
