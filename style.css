@@ -91,14 +91,14 @@ section {
 #grid-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 70%;
 }
 
 #grid-box {
   border: 5px double black;
   background-color: white;
   display: grid;
-  width: 58.5%;
+  width: 63.5%;
   /* *  width value necessary to 
   * accomplish ~proportionate resizing */
   height: 100%
@@ -115,14 +115,16 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-footer {
-  font-family: Verdana, Tahoma, sans-serif;
   position: fixed;
   bottom: 0px;
   width: 100%;
+}
+
+footer {
+  font-family: Verdana, Tahoma, sans-serif;
+  width: 100%;
   background-color: rgb(36, 134, 199);
-  height: 5%;
+  height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
