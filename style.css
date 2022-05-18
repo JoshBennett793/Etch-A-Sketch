@@ -31,8 +31,6 @@ section {
   min-width: 100%;
   height: 75%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: nowrap;
   flex: 1 1 auto;
 }
@@ -45,7 +43,7 @@ section {
 
 #toolbar {
   display: grid;
-  overflow: scroll;
+  overflow: hidden;
   grid-auto-columns: 1fr;
   grid-auto-rows: 3em;
   margin-left: auto;
@@ -59,7 +57,8 @@ section {
     "random"
     "greyscale"
     "eraser"
-    "grid-size";
+    "grid-size"
+    "range-input";
 }
 
 #paint-color {
@@ -82,21 +81,30 @@ section {
   grid-area: grid-size;
 }
 
+#range-input {
+  grid-area:range-input;
+  font-size: 40px;
+  font-size: 4vw;
+  text-align: center;
+}
+
 #grid-wrapper {
   display: flex;
   justify-content: center;
-  width: 60%;
+  width: 100%;
 }
 
 #grid-box {
   border: 5px double black;
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(N, 1fr);
-  grid-template-rows: repeat(N, 1fr);
-  width: 400px;
-  height: 400px;
-  overflow: scroll;
+  width: 58.5%;
+  /* *  width value necessary to 
+  * accomplish ~proportionate resizing */
+  height: 100%
+  /* *  padding-bottom/top pushes grid
+  *  square divs to top/bottom of container.
+  * Cannot be used for proportionate resizing. */
 }
 
 .grid-square {
