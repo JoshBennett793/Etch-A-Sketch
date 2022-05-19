@@ -43,22 +43,23 @@ section {
 
 #toolbar {
   display: grid;
-  overflow: hidden;
   grid-auto-columns: 1fr;
   grid-auto-rows: 3em;
+  overflow: hidden;
   margin-left: auto;
   padding: 10px;
   border-radius: 12px;
+  width: 25vw;
   font-size: 16px;
   font-size: 2vw;
-  width: 25vw;
   grid-template-areas:
     "paint-color"
     "random"
     "greyscale"
     "eraser"
     "grid-size"
-    "range-input";
+    "range-input"
+    "button";
 }
 
 #paint-color {
@@ -86,6 +87,16 @@ section {
   font-size: 40px;
   font-size: 4vw;
   text-align: center;
+  align-self: end;
+}
+
+button {
+  grid-area: button;
+  justify-self: center;
+  align-self: end;
+  height: 32px;
+  border-radius: 12px;
+  width: 75%;
 }
 
 #grid-wrapper {
@@ -98,10 +109,10 @@ section {
   border: 5px double black;
   background-color: white;
   display: grid;
-  width: 63.5%;
+  width: 75%;
   /* *  width value necessary to 
   * accomplish ~proportionate resizing */
-  height: 100%
+  height: 100%;
   /* *  padding-bottom/top pushes grid
   *  square divs to top/bottom of container.
   * Cannot be used for proportionate resizing. */
