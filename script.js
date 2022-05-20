@@ -1,10 +1,10 @@
 // Stylesheet
 function getStyleSheet() {
-	for (const sheet of document.styleSheets) {
-		if (sheet.title === "stylesheet") {
-			return sheet;
-		}
-	}
+  for (const sheet of document.styleSheets) {
+    if (sheet.title === "stylesheet") {
+      return sheet;
+    }
+  }
 }
 const stylesheet = getStyleSheet();
 
@@ -28,8 +28,8 @@ function createGrid(value) {
       range.value
     )}`;
     const gridSquareDiv = document.createElement("div");
-		gridSquareDiv.className = `grid-square grid-square${j}`;
-		gridSquareDiv.setAttribute("onMouseEnter", "handleMouseOver(event)");
+    gridSquareDiv.className = `grid-square grid-square${j}`;
+    gridSquareDiv.setAttribute("onMouseEnter", "handleMouseEnter(event)");
     gridSquareDiv.textContent = "";
     grid.appendChild(gridSquareDiv);
   }
@@ -48,9 +48,16 @@ range.addEventListener("input", () => {
 paintColor.addEventListener("input", () => {
   color = paintColor.value;
 });
-function handleMouseOver(event) {
-	event.target.style.backgroundColor = `${color}`;
-}
+
+function handleMouseEnter(event) {
+  let eraserRadioValue = document.querySelector("input[name=eraser]").checked;
+
+  if (eraserRadioValue === true ) {
+    event.target.style.backgroundColor = "white";
+  } else {
+    event.target.style.backgroundColor = `${color}`;
+  }
+};
 
 button.addEventListener("click", () => {
   grid.textContent = "";
