@@ -17,9 +17,10 @@ let paintColor = document.getElementById("paint-color");
 let color = paintColor.value;
 let randomColor = document.getElementById("random-color");
 let greyscale = document.getElementById("greyscale");
-let eraser = document.getElementById("eraser");
+const eraser = document.getElementById("eraser");
 let range = document.getElementById("grid-size");
-let rangeInput = document.querySelector("#range-input");
+const rangeInput = document.querySelector("#range-input");
+const button = document.querySelector("#clear");
 
 function createGrid(value) {
   for (let i = 0, j = 1; i < value * value; i++, j++) {
@@ -28,7 +29,7 @@ function createGrid(value) {
     )}`;
     const gridSquareDiv = document.createElement("div");
 		gridSquareDiv.className = `grid-square grid-square${j}`;
-		gridSquareDiv.setAttribute("onMouseOver", "handleMouseOver(event)");
+		gridSquareDiv.setAttribute("onMouseEnter", "handleMouseOver(event)");
     gridSquareDiv.textContent = "";
     grid.appendChild(gridSquareDiv);
   }
@@ -47,7 +48,11 @@ range.addEventListener("input", () => {
 paintColor.addEventListener("input", () => {
   color = paintColor.value;
 });
-
 function handleMouseOver(event) {
 	event.target.style.backgroundColor = `${color}`;
 }
+
+button.addEventListener("click", () => {
+  grid.textContent = "";
+  createGrid(parseInt(range.value));
+});

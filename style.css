@@ -64,22 +64,27 @@ section {
 
 #paint-color {
   grid-area: paint-color;
+  cursor: pointer;
 }
 
 #random {
   grid-area: random;
+  cursor: pointer;
 }
 
 #greyscale {
   grid-area: greyscale;
+  cursor: pointer;
 }
 
 #eraser {
   grid-area: eraser;
+  cursor: pointer;
 }
 
 #grid-size {
   grid-area: grid-size;
+  cursor: pointer;
 }
 
 #range-input {
@@ -94,9 +99,16 @@ button {
   grid-area: button;
   justify-self: center;
   align-self: end;
+  font-size: 24px;
+  font-family: "Cabin Sketch";
   height: 32px;
-  border-radius: 12px;
-  width: 75%;
+  width: 55%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 #grid-wrapper {
@@ -106,9 +118,10 @@ button {
 }
 
 #grid-box {
-  border: 5px double black;
-  background-color: white;
   display: grid;
+  cursor: crosshair;
+  background-color: white;
+  border: 5px double black;
   width: 75%;
   /* *  width value necessary to 
   * accomplish ~proportionate resizing */
