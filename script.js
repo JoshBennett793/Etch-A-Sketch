@@ -49,7 +49,7 @@ function getRandomColor() {
   return color;
 };
 
-function increaseBrightness(event) {
+function decreaseBrightness(event) {
   if (event.target.style.filter === "brightness(100%)") {
     event.target.style.filter = "brightness(90%)";
   } else if (event.target.style.filter === "brightness(90%)") {
@@ -79,7 +79,7 @@ function handleMouseEnter(event) {
     event.target.style.filter = "brightness(100%)";
     event.target.style.backgroundColor = `${randomColor}`;
   } else if (grayscaleRadio.checked === true) {
-    increaseBrightness(event);    
+    decreaseBrightness(event);    
   } else if (eraserRadio.checked === true) {
     event.target.style.filter = "brightness(100%)";
     event.target.style.backgroundColor = "white";
