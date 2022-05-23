@@ -94,20 +94,16 @@ range.addEventListener("input", () => {
   createGrid(parseInt(range.value));
 });
 
-paintColor.addEventListener("input", () => {
+const randomRadio = document.querySelector("input[name=random]");
+const grayscaleRadio = document.querySelector("input[name=grayscale]");
+const eraserRadio = document.querySelector("input[name=eraser]");
+
+paintColor.addEventListener("click", () => {
   color = paintColor.value;
   randomRadio.checked = false;
   grayscaleRadio.checked = false;
   eraserRadio.checked = false;
 });
-
-paintColor.addEventListener("click", () => {
-  eraserRadio.checked = false;
-});
-
-const randomRadio = document.querySelector("input[name=random]");
-const grayscaleRadio = document.querySelector("input[name=grayscale]");
-const eraserRadio = document.querySelector("input[name=eraser]");
 
 randomRadio.addEventListener("change", () => {
   if (randomRadio.checked === true) {
